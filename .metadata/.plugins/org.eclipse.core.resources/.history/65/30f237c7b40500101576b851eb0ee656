@@ -1,0 +1,40 @@
+package exerciciosDeFixacao;
+
+import java.util.Scanner;
+
+//Faça um programa que leia N números inteiros e armazene-os em um vetor. Em seguida, mostre na
+//tela todos os números pares, e também a quantidade de números pares.
+
+public class NumerosPares {
+	public static void main(String[] args) {
+
+		Scanner sc = new Scanner(System.in);
+
+		System.out.print("Quantos numeros você vai digitar? ");
+		int n = sc.nextInt();
+
+		int[] vetor = new int[n];
+
+		for (int i : vetor) {
+			System.out.println("Digite um numero: ");
+			vetor[i] = sc.nextInt();
+		}
+
+		int soma = 0;
+
+		System.out.println("NUMEROS PARES: ");
+		for (int i : vetor) {
+			System.out.print(i + " ");
+			if (vetor[i] % 2 == 0) {
+				System.out.print(vetor[i] + " ");
+				soma++;
+			}
+		}
+
+		System.out.println();
+		System.out.println("QUANTIDADE DE NUMEROS PARES = " + soma);
+
+		sc.close();
+
+	}
+}

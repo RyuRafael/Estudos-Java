@@ -1,0 +1,58 @@
+package Employee;
+
+import java.util.ArrayList;
+import java.util.List;
+import java.util.stream.Collectors;
+import java.util.stream.Stream;
+
+
+public class Employee {
+	
+	private static final Stream<String> Collectores = null;
+	private Integer id;
+	private String name;
+	private Double salary;
+	
+	
+	List<Integer> listId = new ArrayList<Integer>();
+	List<String> listName = new  ArrayList<String>();
+	List<Double> listSalary = new ArrayList<Double>();	
+	
+	public Employee() {
+		
+	}
+
+	
+	
+	public void increaseSalary(Double percentage) {
+		
+		this.salary = listSalary.get(id);
+		
+		this.salary += salary * ((double)percentage / 100);
+		
+		listSalary.add(id,salary);
+		
+	}
+
+
+
+	public Integer getId() {
+		return id;
+	}
+
+
+
+	public void setId(Integer id) {
+		this.id = id;
+	}
+	
+
+	public void notNull() {
+		List<Integer> resultI = listId.stream().filter(s -> s != null).collect(Collectors.toList());
+		List<String> resultS = listName.stream().filter(s -> s != null).collect(Collectors.toList());
+		List<Double> resultD = listSalary.stream().filter(s -> s != null).collect(Collectors.toList());
+
+	}
+	
+
+}

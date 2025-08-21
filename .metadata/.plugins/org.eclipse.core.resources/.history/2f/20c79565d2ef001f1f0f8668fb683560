@@ -1,0 +1,41 @@
+package funcionario;
+
+public class Bank {
+
+	private double balance;
+
+	public void deposit(Double amount) {
+
+		balance += amount;
+
+	}
+
+	public void withdraw(Employee employee, double amount) {
+
+		if (amount <= balance) {
+
+			balance -= amount;
+
+			double total = employee.getSalary() + amount;
+
+			employee.setSalary(total);
+
+			System.out.println("withdraw successfully!");
+
+		}
+
+		else {
+
+			System.out.println("dont's balance");
+
+		}
+
+	}
+
+	@Override
+	public String toString() {
+		// TODO Auto-generated method stub
+		return "BALANCE: " + balance;
+	}
+
+}

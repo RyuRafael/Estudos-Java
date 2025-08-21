@@ -1,0 +1,32 @@
+package teste;
+
+import java.text.Format;
+import java.util.Scanner;
+
+public class  Main{
+
+public static void main(String[]args) {
+	
+	Scanner sc = new Scanner(System.in);
+	
+	double xa,xb,xc,ya,yb,yc;
+	
+	/*System.out.print("Digite os valores de x: ");
+	xa = sc.nextDouble();
+	xb = sc.nextDouble();
+	xc = sc.nextDouble();
+	sc.nextLine();*/
+	System.out.printf("%n Digite os valores de y: ");
+	ya = sc.nextDouble();
+	yb = sc.nextDouble();
+	yc = sc.nextDouble();
+	
+	double py = ((ya + yb +yc ) / 2);
+	double areay = Math.sqrt((py - ya) + (py - yb) + (py - yc));
+	
+	System.out.println(areay);
+	
+	
+	}
+	
+}

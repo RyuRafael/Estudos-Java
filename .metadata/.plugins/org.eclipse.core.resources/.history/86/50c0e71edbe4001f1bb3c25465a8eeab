@@ -1,0 +1,44 @@
+package algoritos_1;
+
+import java.util.Scanner;
+
+//Faça um programa que leia as notas referentes às duas avaliações de um aluno. Calcule e imprima a média semestral. 
+//Faça com que o algoritmo só aceite notas válidas (uma nota válida deve pertencer ao intervalo [0,10]). Cada nota deve ser validada separadamente.
+
+public class Validacao_de_notas {
+
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+
+		int i = 0;
+		int sum = 0;
+		int cont = 0;
+
+		while (i < 4) {
+			double nota = sc.nextDouble();
+
+			if (nota < 0 || nota > 10) {
+				System.out.println("nota invalida");
+				sum = 0;
+				cont = 0;
+				i = 0;
+			}
+
+			else {
+
+				sum += nota;
+				i++;
+				cont++;
+			}
+
+			if (cont == 2) {
+				double media = sum / 2;
+				System.out.println("media = " + String.format("%.2f", media));
+				cont = 0;
+			}
+		}
+		sc.close();
+
+	}
+
+}

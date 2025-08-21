@@ -1,0 +1,25 @@
+package teste;
+
+import java.util.Scanner;
+import teste.triangulo;
+
+
+public class Main {
+
+	public static void main(String[] args) {
+		
+		Scanner sc = new Scanner(System.in);
+
+		product pd = new product();
+		
+		while(true) {
+			System.out.println(pd.totalvalueinstock());
+			pd.addquantityproduct(sc.nextInt());
+			pd.removequantityproduct(sc.nextInt());
+		}
+		
+		
+		
+		
+	}
+}

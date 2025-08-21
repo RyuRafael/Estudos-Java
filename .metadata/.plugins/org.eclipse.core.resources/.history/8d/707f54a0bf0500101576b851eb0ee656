@@ -1,0 +1,44 @@
+package exerciciosDeFixacao;
+//Fazer um programa para ler um vetor de N números inteiros. Em seguida, mostrar na tela a média
+
+//aritmética somente dos números pares lidos, com uma casa decimal. Se nenhum número par for
+//digitado, mostrar a mensagem "NENHUM NUMERO PAR"
+
+import java.util.Scanner;
+
+public class MediaPares {
+
+	public static void main(String[] args) {
+
+		Scanner sc = new Scanner(System.in);
+		System.out.println("Quantos elementos vai ter o vetor");
+		int n = sc.nextInt();
+
+		int[] vetor = new int[n];
+
+		for (int i = 0; i < n; i++) {
+			System.out.println("Digite o numero #" + (i + 1));
+			int num = sc.nextInt();
+
+		}
+
+		int soma = 0;
+
+		for (int i = 0; i < n; i++) {
+			if (vetor[i] % 2 == 0) {
+				soma += vetor[i];
+
+			}
+		}
+
+		System.out.printf("MEDIA DOS PARES = %.1f%n", (soma / n));
+
+		if (soma == 0) {
+			System.out.println("NENHUM NUMERO PAR");
+
+		}
+
+		sc.close();
+	}
+
+}

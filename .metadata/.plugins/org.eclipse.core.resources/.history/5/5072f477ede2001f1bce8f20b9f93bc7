@@ -1,0 +1,29 @@
+package teste;
+
+import java.util.Scanner;
+import teste.triangulo;
+
+
+public class Main {
+
+	public static void main(String[] args) {
+
+		triangulo tx,ty;
+		
+		tx = new triangulo();
+		ty = new triangulo();
+		
+		
+		
+		
+		tx.calculo();
+		ty.calculo();
+		
+		if(tx.calculo() > ty.calculo()) {
+			System.out.println(tx.calculo());
+		}
+		
+		
+		
+	}
+}

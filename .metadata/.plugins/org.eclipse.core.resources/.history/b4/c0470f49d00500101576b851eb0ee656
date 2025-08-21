@@ -1,0 +1,58 @@
+package exerciciosDeFixacao;
+//Fazer um programa para ler um conjunto de N nomes de alunos, bem como as notas que eles tiraram
+
+//no 1º e 2º semestres. Cada uma dessas informações deve ser armazenada em um vetor. Depois, imprimir
+//os nomes dos alunos aprovados, considerando aprovados aqueles cuja média das notas seja maior ou
+//igual a 6.0 (seis).
+
+import java.util.Scanner;
+
+public class Aprovados {
+
+	private String nome;
+	private double nota_1;
+	private double nota_2;
+
+	public Aprovados(String nome, double nota_1, double nota_2) {
+		super();
+		this.nome = nome;
+		this.nota_1 = nota_1;
+		this.nota_2 = nota_2;
+	}
+	
+	public static void calcularMedia(Aprovados[] alunos) {
+		
+		for(Aprovados aluno : alunos) {
+			if((aluno.nota_1 + aluno.nota_2) / 2 >= 6) {
+				
+				System.out.println(aluno);
+			}
+		}
+		
+	}
+
+	public static void main(String[] args) {
+
+		Scanner sc = new Scanner(System.in);
+
+		System.out.println("Digire a quantidade de alunos: ");
+		int n = sc.nextInt();
+
+		Aprovados[] alunos = new Aprovados[n];
+
+		for (int i = 0; i < n; i++) {
+			sc.nextLine();
+			System.out.println("Digite o nome do aluno #" + (i + 1));
+			String nome = sc.nextLine();
+			System.out.print("Digite a primeira nota: ");
+			double nota_1 = sc.nextDouble();
+			System.out.print("Digite a segunda nota: ");
+			double nota_2 = sc.nextDouble();
+
+			alunos[i] = new Aprovados(nome, nota_1, nota_2);
+		}
+		
+		calcularMedia(alunos);
+	}
+
+}

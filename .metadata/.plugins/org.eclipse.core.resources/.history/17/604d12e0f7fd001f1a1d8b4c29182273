@@ -1,0 +1,68 @@
+package Employee;
+
+import java.util.Locale;
+import java.util.Scanner;
+
+public class Main {
+
+	public static void main(String[] args) {
+		Locale.setDefault(Locale.US);
+		Scanner sc = new Scanner(System.in);
+
+		Employee ep = new Employee();
+
+		System.out.println("How many employee will to registered: ");
+		int n = sc.nextInt();
+
+		for (int i = 0; i < n; i++) {
+
+			System.out.print("ID: ");
+			int id = sc.nextInt();
+			sc.nextLine();
+			System.out.print("NAME: ");
+			String name = sc.nextLine();
+			System.out.println("SALARY: ");
+			Double salary = sc.nextDouble();
+
+			// ep.listId.add(id);
+			ep.listName.add((Integer)id, name);
+			ep.listSalary.add(id, salary);
+			ep.listId.add(id);
+
+		}
+		System.out.println("Enter the employee id that have salary encrease: ");
+		sc.nextLine();
+		Integer id = sc.nextInt();
+		System.out.println("Enter the percentage: ");
+		Double percentage = sc.nextDouble();
+
+		Employee ep1 = new Employee(id);
+
+		ep.increaseSalary(percentage);
+		
+		
+		
+		
+		
+		
+		System.out.println("List of employee: \n");
+		
+		for(int i = 0; i < ep.listName.size(); i++) {
+			
+			
+			System.out.println(ep.listId + ", " + ep.listName + ", " + ep.listSalary);
+			
+			
+		}
+		
+		
+		
+		
+		
+		
+		
+		
+		
+	}
+
+}
