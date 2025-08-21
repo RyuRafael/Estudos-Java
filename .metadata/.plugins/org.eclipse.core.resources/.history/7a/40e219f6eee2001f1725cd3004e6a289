@@ -1,0 +1,17 @@
+package teste;
+
+import java.util.Scanner;
+import teste.triangulo;
+
+
+public class Main {
+
+	public static void main(String[] args) {
+
+		product pd = new product();
+		
+		System.out.println(pd.totalvalueinstock());
+		
+		
+	}
+}

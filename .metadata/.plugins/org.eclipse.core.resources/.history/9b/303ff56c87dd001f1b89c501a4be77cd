@@ -1,0 +1,26 @@
+package teste;
+
+import java.util.Scanner;
+
+public class  Main{
+
+public static void main(String[]args) {
+	
+	Scanner sc = new Scanner(System.in);
+	
+	
+	int temperatura = 0;
+	int n = 0;
+	
+	do {
+	int c = sc.nextInt();
+	temperatura = ((c * 9) / 5) + 32;	
+	System.out.printf("%nEquivalente em fahrenheit: " + temperatura);
+	
+	System.out.println("digite 1 para calcular novamente e 2 para emcerar:");
+	n = sc.nextInt();
+	}while(n == 1);
+	
+	
+	}
+}

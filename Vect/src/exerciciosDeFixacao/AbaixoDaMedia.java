@@ -1,0 +1,43 @@
+package exerciciosDeFixacao;
+//Fazer um programa para ler um número inteiro N e depois um vetor de N números reais. Em seguida,
+
+//mostrar na tela a média aritmética de todos elementos com três casas decimais. Depois mostrar todos
+//os elementos do vetor que estejam abaixo da média, com uma casa decimal cada.
+
+import java.util.Scanner;
+
+public class AbaixoDaMedia {
+
+	public static void main(String[] args) {
+
+		Scanner sc = new Scanner(System.in);
+
+		System.out.println("QUANTOS ELEMENTOS VAI TER O VETOR? ");
+		int n = sc.nextInt();
+
+		double[] vetor = new double[n];
+
+		for (int i = 0; i < n; i++) {
+			System.out.println("Digite um numero: ");
+			vetor[i] = sc.nextDouble();
+		}
+
+		double soma = 0;
+		for (double i : vetor) {
+			soma += i;
+
+		}
+
+		System.out.printf("MEDIA DO VETOR = %.3f%n", soma / n);
+		System.out.println();
+		System.out.println("ELEMENTOS ABAIXO DA MEDIA: ");
+
+		for (int i = 0; i < n; i++) {
+			if (vetor[i] < soma) {
+				System.out.println(vetor[i]);
+			}
+		}
+
+		sc.close();
+	}
+}

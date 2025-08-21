@@ -1,0 +1,131 @@
+package funcionario;
+
+import java.util.Scanner;
+
+public class Main {
+
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+
+		boolean b = true;
+
+		Employee fc = new Employee("box");
+
+		Employee mg = new Manager("gerente");
+
+		Bank bk = new Bank();
+
+		do {
+
+			System.out.println("1 - to receive salary employee:");
+			System.out.println("2 - print information employee:");
+			System.out.println("3 - bank operations employee:");
+
+			System.out.println("4 - to receive salary manager:");
+			System.out.println("5 - print information employee:");
+			System.out.println("6 - bank operations manager:\n");
+
+			System.out.println("enter option:");
+			char op = sc.next().charAt(0);
+			sc.nextLine();
+
+			switch (op) {
+
+			case '1':
+				System.out.println("increase in salary to employee? ");
+				double Percentage = sc.nextDouble();
+				sc.nextLine();
+				System.out.println("Enter with information of employee: \n");
+				fc.setInformation(sc);
+
+				fc.NetSalary();
+
+				fc.IncreaseSalary(Percentage);
+				break;
+
+			case '2':
+				System.out.println(fc);
+
+			case '3':
+				System.out.println("1 - to deposit:");
+				System.out.println("2 - to withdraw:");
+				System.out.println("3 - print balance:\n");
+
+				op = sc.next().charAt(0);
+				sc.nextLine();
+
+				if (op == '1') {
+
+					System.out.println("amount the deposit:");
+					double deposit = sc.nextDouble();
+					fc.depositBank(bk, deposit);
+
+				} else if (op == '2') {
+
+					System.out.println("amount the withdraw:");
+					double withDraw = sc.nextDouble();
+
+					bk.withdraw(fc, withDraw);
+
+				}
+
+				else if (op == '3') {
+
+					System.out.println(bk);
+
+				}
+				break;
+
+			case '4':
+				System.out.println("Enter with information of manager: \n");
+				mg.setInformation(sc);
+				mg.IncreaseSalary(50);
+				break;
+
+			case '5':
+
+				System.out.println(mg);
+				break;
+				
+				
+			case '6':
+				
+				System.out.println("1 - to deposit:");
+				System.out.println("2 - to withdraw:");
+				System.out.println("3 - print balance:\n");
+
+				op = sc.next().charAt(0);
+				sc.nextLine();
+
+				if (op == '1') {
+
+					System.out.println("amount the deposit:");
+					double deposit = sc.nextDouble();
+					fc.depositBank(bk, deposit);
+
+				} else if (op == '2') {
+
+					System.out.println("amount the withdraw:");
+					double withDraw = sc.nextDouble();
+
+					bk.withdraw(fc, withDraw);
+
+				}
+
+				else if (op == '3') {
+
+					System.out.println(bk);
+
+				}
+				break;
+				
+
+			}
+
+		} while (b);
+
+		sc.close();
+
+	}
+
+}

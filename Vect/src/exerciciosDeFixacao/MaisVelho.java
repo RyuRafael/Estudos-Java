@@ -1,0 +1,43 @@
+package exerciciosDeFixacao;
+//Fazer um programa para ler um conjunto de nomes de pessoas e suas respectivas idades. Os nomes
+
+//devem ser armazenados em um vetor, e as idades em um outro vetor. Depois, mostrar na tela o nome
+//da pessoa mais velha.
+
+import java.util.Scanner;
+
+public class MaisVelho {
+
+	public static void main(String[] args) {
+
+		Scanner sc = new Scanner(System.in);
+
+		System.out.println("Quantas pessoas você vai digitar? ");
+		int n = sc.nextInt();
+
+		String[] nome = new String[n];
+		int[] idade = new int[n];
+
+		for (int i = 0; i < n; i++) {
+			sc.nextLine();
+			nome[i] = sc.nextLine();
+			idade[i] = sc.nextInt();
+		}
+
+		int MaisVelho = 0;
+		int index = 0;
+
+		for (int i = 0; i < n; i++) {
+			if (MaisVelho < idade[i]) {
+				MaisVelho = idade[i];
+				index = i;
+			}
+		}
+
+		System.out.println();
+		System.out.print("PESSOA MAIS VELHA: " + nome[index]);
+
+		sc.close();
+	}
+
+}

@@ -1,0 +1,36 @@
+package teste;
+
+public class product {
+
+	String name;
+	double price;
+	int quantity;
+	
+	
+	public product(String name, double prince, int quantity) {
+		this.name = name;
+		this.price = prince;
+		this.quantity = quantity;
+	}
+
+	public double totalvalueinstock() {
+
+		return quantity * price;
+	}
+
+	public void addquantityproduct(int add) {
+		this.quantity += add;
+	}
+
+	public void removequantityproduct(int remove) {
+		this.quantity -= remove;
+	}
+	
+	public void exibir() {
+		System.out.println("name = " + name);
+		System.out.println("price = " + price);
+		System.out.println("quantity = " + quantity);
+		System.out.println(totalvalueinstock());
+	}
+
+}

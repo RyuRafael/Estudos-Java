@@ -1,0 +1,25 @@
+package teste;
+
+public class product {
+
+	String name = "melancia";
+	double price = 17.00;
+	int quantity = 10;
+
+	public double totalvalueinstock() {
+		System.out.println("name = " + name);
+		System.out.println("price = " + price);
+		System.out.println("quantity = " + quantity);
+
+		return (quantity * price);
+	}
+
+	public void addquantityproduct(int add) {
+		this.quantity += add;
+	}
+
+	public void removequantityproduct(int remove) {
+		this.quantity -= remove;
+	}
+
+}

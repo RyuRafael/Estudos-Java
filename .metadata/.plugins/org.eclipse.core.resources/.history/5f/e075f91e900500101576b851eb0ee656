@@ -1,0 +1,83 @@
+package exerciciosDeFixacao;
+
+//Fazer um programa para ler nome, idade e altura de N pessoas, conforme exemplo. Depois, mostrar na
+//tela a altura média das pessoas, e mostrar também a porcentagem de pessoas com menos de 16 anos,
+//bem como os nomes dessas pessoas caso houver.
+
+import java.util.Scanner;
+
+public class MediaPessoas {
+
+	private String nome;
+	private Integer idade;
+	private double altura;
+
+	mediaPessoas(String nome, int idade, double altura) {
+
+		this.nome = nome;
+		this.idade = idade;
+		this.altura = altura;
+	}
+
+	public static double mediaAltura(mediaPessoas[] pessoas) {
+		double soma = 0;
+
+		for (mediaPessoas pessoa : pessoas) {
+			soma += pessoa.altura;
+		}
+
+		return soma / pessoas.length;
+	}
+
+	public static double porcentoIdadeMenor_16(mediaPessoas[] pessoas) {
+		double soma = 0;
+
+		for (mediaPessoas pessoa : pessoas) {
+
+			if (pessoa.idade < 16) {
+				soma++;
+			}
+		}
+		return soma / pessoas.length * 100;
+	}
+
+	public static void nomeMenor_16(mediaPessoas[] pessoas) {
+		for (mediaPessoas pessoa : pessoas) {
+
+			if (pessoa.idade < 16) {
+				System.out.println(pessoa.nome);
+			}
+		}
+	}
+
+	public static void main(String[] args) {
+
+		Scanner sc = new Scanner(System.in);
+
+		int n = sc.nextInt();
+
+		mediaPessoas[] pessoa = new mediaPessoas[n];
+
+		for (int i = 0; i < pessoa.length; i++) {
+			sc.nextLine();
+			String name = sc.nextLine();
+			int idade = sc.nextInt();
+			double altura = sc.nextDouble();
+
+			pessoa[i] = new mediaPessoas(name, idade, altura);
+
+			if (idade < 16) {
+
+			}
+		}
+
+		System.out.printf("Altura média: %.2f%n", mediaAltura(pessoa));
+		System.out.printf("Pessoas com menos de 16 anos: %.1f%", porcentoIdadeMenor_16(pessoa));
+		System.out.println();
+		nomeMenor_16(pessoa);
+
+		sc.close();
+
+	}
+
+}

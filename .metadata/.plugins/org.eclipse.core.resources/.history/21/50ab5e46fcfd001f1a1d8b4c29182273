@@ -1,0 +1,47 @@
+package Employee;
+
+import java.util.ArrayList;
+import java.util.List;
+
+public class Employee {
+	
+	private Integer id;
+	private String name;
+	private Double salary;
+	
+	
+	
+	
+	public Employee() {
+		
+	}
+
+
+
+	public Employee(Integer id) {
+		
+		this.id = id;
+		this.name = name;
+		this.salary = salary;
+		
+	}
+	
+	
+	
+	public void increaseSalary(Double percentage) {
+		
+		this.salary = listSalary.get(id);
+		
+		this.salary += salary * ((double)percentage / 100);
+		
+		listSalary.add(id,salary);
+		
+	}
+	
+	List<Integer> listId = new ArrayList<Integer>();
+	List<String> listName = new  ArrayList<String>();
+	List<Double> listSalary = new ArrayList<Double>();	
+	
+	
+
+}

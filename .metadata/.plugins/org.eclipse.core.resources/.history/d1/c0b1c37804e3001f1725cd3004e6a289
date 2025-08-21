@@ -1,0 +1,21 @@
+package teste;
+
+import java.util.Scanner;
+import teste.triangulo;
+
+public class Main {
+
+	public static void main(String[] args) {
+
+		Scanner sc = new Scanner(System.in);
+
+		product pd = new product("tv", 1250.99, 5);
+		
+		System.out.println(pd);
+
+		while (true) {
+			
+		}
+
+	}
+}

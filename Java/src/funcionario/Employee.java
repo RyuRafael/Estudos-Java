@@ -1,0 +1,112 @@
+package funcionario;
+
+import java.util.Scanner;
+
+public class Employee {
+
+	private String Name;
+	private double Salary;
+	private double Tax;
+	private String position;
+
+	Employee(String name, double salary, String position) {
+		this.position = position;
+		this.Name = name;
+		this.Salary = salary;
+	}
+
+	public void setInformation(Scanner sc) {
+
+		if (Name == "Employee") {
+
+			System.out.println("Enter with the name of funcionary");
+			Name = sc.nextLine();
+
+			System.out.println("Enter with the grossSalary");
+			Salary += sc.nextDouble();
+			System.out.println("Enter with the tax");
+			Tax = sc.nextDouble();
+			sc.nextLine();
+
+		}
+
+		else {
+			System.out.println("Enter with the grossSalary");
+			Salary += sc.nextDouble();
+			System.out.println("Enter with the tax");
+			Tax = sc.nextDouble();
+			sc.nextLine();
+		}
+
+	}
+
+	public double NetSalary() {
+
+		return Salary - Tax;
+
+	}
+
+	public void IncreaseSalary(double porcento) {
+
+		double Increase = ((double) porcento / 100) * Salary;
+
+		this.Salary += Increase;
+
+		System.out.println("Updated data: " + Name + ", $ " + String.format("%.2f", NetSalary()));
+	}
+
+	public void depositBank(Bank bank, double amount) {
+
+		if (Salary > amount) {
+			Salary -= amount;
+
+			bank.deposit(amount);
+
+			System.out.println("deposited successfully");
+		}
+
+		else {
+			System.out.println("dont's balance");
+		}
+
+	}
+
+	@Override
+	public String toString() {
+		// TODO Auto-generated method stub
+		return "Nome: " + Name + " , BALANCE: $ " + String.format("%.2f", NetSalary());
+	}
+
+	public String getName() {
+		return Name;
+	}
+
+	public void setName(String name) {
+		Name = name;
+	}
+
+	public double getSalary() {
+		return Salary;
+	}
+
+	public void setSalary(double salary) {
+		Salary = salary;
+	}
+
+	public double getTax() {
+		return Tax;
+	}
+
+	public void setTax(double tax) {
+		Tax = tax;
+	}
+
+	public String getPosition() {
+		return position;
+	}
+
+	public void setPosition(String position) {
+		this.position = position;
+	}
+
+}
