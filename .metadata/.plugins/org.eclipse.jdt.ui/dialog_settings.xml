@@ -19,9 +19,9 @@
 	<section name="NewClassCreationWizard.dialogBounds">
 		<item key="DIALOG_X_ORIGIN" value="20"/>
 		<item key="DIALOG_Y_ORIGIN" value="20"/>
-		<item key="DIALOG_WIDTH" value="666"/>
-		<item key="DIALOG_HEIGHT" value="722"/>
-		<item key="DIALOG_FONT_NAME" value="1|Ubuntu|11.0|0|GTK|1|"/>
+		<item key="DIALOG_WIDTH" value="647"/>
+		<item key="DIALOG_HEIGHT" value="768"/>
+		<item key="DIALOG_FONT_NAME" value="1|Ubuntu Sans|11.0|0|GTK|1|"/>
 	</section>
 	<section name="OptionalMessageDialog.hide.">
 		<item key="org.eclipse.jdt.ui.typecomment.deprecated" value="true"/>
@@ -34,8 +34,8 @@
 		<item key="DIALOG_X_ORIGIN" value="20"/>
 		<item key="DIALOG_Y_ORIGIN" value="20"/>
 		<item key="DIALOG_WIDTH" value="613"/>
-		<item key="DIALOG_HEIGHT" value="538"/>
-		<item key="DIALOG_FONT_NAME" value="1|Ubuntu|11.0|0|GTK|1|"/>
+		<item key="DIALOG_HEIGHT" value="500"/>
+		<item key="DIALOG_FONT_NAME" value="1|Ubuntu Sans|11.0|0|GTK|1|"/>
 	</section>
 	<section name="NewPackageWizardPage">
 		<item key="create_package_info_java" value="true"/>
@@ -66,9 +66,9 @@
 	<section name="DialogBounds_GetterSetterTreeSelectionDialog">
 		<item key="DIALOG_X_ORIGIN" value="20"/>
 		<item key="DIALOG_Y_ORIGIN" value="20"/>
-		<item key="DIALOG_WIDTH" value="646"/>
-		<item key="DIALOG_HEIGHT" value="739"/>
-		<item key="DIALOG_FONT_NAME" value="1|Ubuntu|11.0|0|GTK|1|"/>
+		<item key="DIALOG_WIDTH" value="648"/>
+		<item key="DIALOG_HEIGHT" value="800"/>
+		<item key="DIALOG_FONT_NAME" value="1|Ubuntu Sans|11.0|0|GTK|1|"/>
 	</section>
 	<section name="SourceActionDialog.constructors">
 		<item key="VisibilityModifier" value="1"/>
@@ -82,16 +82,16 @@
 	<section name="DialogBounds_GenerateConstructorUsingFieldsSelectionDialog">
 		<item key="DIALOG_X_ORIGIN" value="20"/>
 		<item key="DIALOG_Y_ORIGIN" value="20"/>
-		<item key="DIALOG_WIDTH" value="629"/>
-		<item key="DIALOG_HEIGHT" value="721"/>
-		<item key="DIALOG_FONT_NAME" value="1|Ubuntu|11.0|0|GTK|1|"/>
+		<item key="DIALOG_WIDTH" value="633"/>
+		<item key="DIALOG_HEIGHT" value="781"/>
+		<item key="DIALOG_FONT_NAME" value="1|Ubuntu Sans|11.0|0|GTK|1|"/>
 	</section>
 	<section name="JavaProjectWizard.dialogBounds">
 		<item key="DIALOG_X_ORIGIN" value="20"/>
 		<item key="DIALOG_Y_ORIGIN" value="20"/>
-		<item key="DIALOG_WIDTH" value="813"/>
-		<item key="DIALOG_HEIGHT" value="876"/>
-		<item key="DIALOG_FONT_NAME" value="1|Ubuntu|11.0|0|GTK|1|"/>
+		<item key="DIALOG_WIDTH" value="819"/>
+		<item key="DIALOG_HEIGHT" value="1002"/>
+		<item key="DIALOG_FONT_NAME" value="1|Ubuntu Sans|11.0|0|GTK|1|"/>
 	</section>
 	<section name="AddSourceFolderWizard.dialogBounds">
 		<item key="DIALOG_X_ORIGIN" value="20"/>
@@ -131,5 +131,15 @@
 		<item key="DIALOG_WIDTH" value="646"/>
 		<item key="DIALOG_HEIGHT" value="560"/>
 		<item key="DIALOG_FONT_NAME" value="1|Ubuntu|11.0|0|GTK|1|"/>
+	</section>
+	<section name="AddUnimplementedConstructorsDialog">
+		<item key="OmitCallToSuper" value="false"/>
+	</section>
+	<section name="DialogBounds_AddUnimplementedConstructorsDialog">
+		<item key="DIALOG_X_ORIGIN" value="647"/>
+		<item key="DIALOG_Y_ORIGIN" value="44"/>
+		<item key="DIALOG_WIDTH" value="633"/>
+		<item key="DIALOG_HEIGHT" value="715"/>
+		<item key="DIALOG_FONT_NAME" value="1|Ubuntu Sans|11.0|0|GTK|1|"/>
 	</section>
 </section>
