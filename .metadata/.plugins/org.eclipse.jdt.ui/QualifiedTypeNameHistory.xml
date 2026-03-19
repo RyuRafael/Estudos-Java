@@ -32,12 +32,17 @@
     <fullyQualifiedTypeName name="java.text.Format"/>
     <fullyQualifiedTypeName name="java.lang.String"/>
     <fullyQualifiedTypeName name="java.lang.Override"/>
-    <fullyQualifiedTypeName name="java.util.Scanner"/>
     <fullyQualifiedTypeName name="java.text.SimpleDateFormat"/>
-    <fullyQualifiedTypeName name="java.util.ArrayList"/>
     <fullyQualifiedTypeName name="java.lang.Character"/>
     <fullyQualifiedTypeName name="produtos.ProdutoImportado"/>
     <fullyQualifiedTypeName name="produtos.ProdutoUsado"/>
     <fullyQualifiedTypeName name="javax.xml.crypto.Data"/>
     <fullyQualifiedTypeName name="java.util.Date"/>
+    <fullyQualifiedTypeName name="java.lang.Math"/>
+    <fullyQualifiedTypeName name="classeAbstratas.Cor"/>
+    <fullyQualifiedTypeName name="java.util.Scanner"/>
+    <fullyQualifiedTypeName name="java.util.ArrayList"/>
+    <fullyQualifiedTypeName name="exercicioDeFixacao.PessoaFisica"/>
+    <fullyQualifiedTypeName name="exercicioDeFixacao.PessoaJuridica"/>
+    <fullyQualifiedTypeName name="exercicioDeFixacao.Contribuente"/>
 </qualifiedTypeNameHistroy>

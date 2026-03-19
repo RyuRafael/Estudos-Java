@@ -118,9 +118,9 @@
 	<section name="DialogBounds_GenerateToStringDialog">
 		<item key="DIALOG_X_ORIGIN" value="20"/>
 		<item key="DIALOG_Y_ORIGIN" value="20"/>
-		<item key="DIALOG_WIDTH" value="566"/>
-		<item key="DIALOG_HEIGHT" value="749"/>
-		<item key="DIALOG_FONT_NAME" value="1|Ubuntu|11.0|0|GTK|1|"/>
+		<item key="DIALOG_WIDTH" value="572"/>
+		<item key="DIALOG_HEIGHT" value="807"/>
+		<item key="DIALOG_FONT_NAME" value="1|Ubuntu Sans|11.0|0|GTK|1|"/>
 	</section>
 	<section name="JavaEditorCodeMiningConfigurationBlock">
 		<item key="expanded0" value="true"/>
@@ -128,9 +128,9 @@
 	<section name="NewEnumCreationWizard.dialogBounds">
 		<item key="DIALOG_X_ORIGIN" value="20"/>
 		<item key="DIALOG_Y_ORIGIN" value="20"/>
-		<item key="DIALOG_WIDTH" value="646"/>
-		<item key="DIALOG_HEIGHT" value="560"/>
-		<item key="DIALOG_FONT_NAME" value="1|Ubuntu|11.0|0|GTK|1|"/>
+		<item key="DIALOG_WIDTH" value="631"/>
+		<item key="DIALOG_HEIGHT" value="606"/>
+		<item key="DIALOG_FONT_NAME" value="1|Ubuntu Sans|11.0|0|GTK|1|"/>
 	</section>
 	<section name="AddUnimplementedConstructorsDialog">
 		<item key="OmitCallToSuper" value="false"/>
