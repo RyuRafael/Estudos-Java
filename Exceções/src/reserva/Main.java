@@ -6,9 +6,11 @@ import java.time.format.DateTimeParseException;
 import java.util.InputMismatchException;
 import java.util.Scanner;
 
+import model.exceptions.DomainException;
+
 public class Main {
 
-	public static void main(String[] args) {
+	public static void main(String[] args) throws DomainException {
 		Scanner sc = new Scanner(System.in);
 		
 		DateTimeFormatter df = DateTimeFormatter.ofPattern("dd/MM/yyyy");
@@ -48,7 +50,7 @@ public class Main {
 		catch (DateTimeParseException e) {
 			System.err.println("Formato de data inválido, tente novamente mais tarde!");
 		}
-		catch (IllegalArgumentException e) {
+		catch (DomainException e) {
 			System.out.println("Erro: " + e.getMessage());
 		}
 	}

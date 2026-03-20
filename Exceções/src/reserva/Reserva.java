@@ -5,6 +5,8 @@ import java.time.Period;
 import java.time.format.DateTimeFormatter;
 import java.util.Date;
 
+import model.exceptions.DomainException;
+
 public class Reserva {
 
 	private int numQuarto;
@@ -50,15 +52,15 @@ public class Reserva {
 		return p.getDays();
 	}
 
-	public void updateDatas(LocalDate checkin, LocalDate checkout) {
+	public void updateDatas(LocalDate checkin, LocalDate checkout) throws DomainException {
 
 		Period p = Period.between(checkin, checkout);
-
+		
 		if (checkin.isBefore(this.checkin)) {
-			throw new IllegalArgumentException("Alteração da reserva só poder ser feita para datas futuras!");
+			throw new DomainException("Alteração da reserva só poder ser feita para datas futuras!");
 		}
 		if (p.getDays() < 0) {
-			throw new IllegalArgumentException("A data de saida deve ser maior que a data de entrada!");
+			throw new DomainException("A data de saida deve ser maior que a data de entrada!");
 
 		}
 			this.checkin = checkin;
