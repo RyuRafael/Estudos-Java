@@ -55,16 +55,14 @@ public class Reserva {
 		Period p = Period.between(checkin, checkout);
 
 		if (checkin.isBefore(this.checkin)) {
-			System.out.println("Alteração da reserva só poder ser feita para datas futuras!");
+			throw new IllegalArgumentException("Alteração da reserva só poder ser feita para datas futuras!");
 		}
 		if (p.getDays() < 0) {
-			System.out.println("A data de saida deve ser maior que a data de entrada!");
+			throw new IllegalArgumentException("A data de saida deve ser maior que a data de entrada!");
 
 		}
-		else {
 			this.checkin = checkin;
 			this.checkout = checkout;
-		duracao();}
 
 	}
 

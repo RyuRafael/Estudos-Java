@@ -48,6 +48,9 @@ public class Main {
 		catch (DateTimeParseException e) {
 			System.err.println("Formato de data inválido, tente novamente mais tarde!");
 		}
+		catch (IllegalArgumentException e) {
+			System.out.println("Erro: " + e.getMessage());
+		}
 	}
 
 }
