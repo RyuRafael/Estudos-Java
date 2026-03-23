@@ -12,12 +12,9 @@ public class Main {
 		
 		String path = "/home/rafael/Documentos/good.txt";
 		
-		FileReader fr = null;
-		BufferedReader br = null;
-		
-		try {
-			fr = new FileReader(path);
-			br = new BufferedReader(fr);
+		// Agora o BufferedReader e o FileReader são instanciados dentro da declaração do bloco try
+		// Fecha automaticamente o BufferedReader e o FileReader
+		try (BufferedReader br = new BufferedReader( new FileReader(path))){
 			
 			String file = br.readLine();
 			
@@ -29,19 +26,6 @@ public class Main {
 		}
 		catch (IOException e) {
 			System.out.println("ERRO: " + e.getMessage());
-		}
-		finally {
-			try {
-				if(fr != null) {
-					fr.close();
-				}
-				if(br != null) {
-					br.close();
-				}
-			}
-			catch (Exception e) {
-				e.printStackTrace();
-			}
 		}
 
 	}
