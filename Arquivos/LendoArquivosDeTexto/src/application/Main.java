@@ -1,6 +1,8 @@
 package application;
 
+import java.io.BufferedReader;
 import java.io.File;
+import java.io.FileReader;
 import java.io.IOException;
 import java.util.Scanner;
 
@@ -8,25 +10,37 @@ public class Main {
 
 	public static void main(String[] args) {
 		
-		// Instanciar um objeto do tipo file que recebe o caminho do arquivo txt.
-		File file = new File("/home/rafael/Documentos/good.txt");
-		Scanner sc = null;
+		String path = "/home/rafael/Documentos/good.txt";
+		
+		FileReader fr = null;
+		BufferedReader br = null;
 		
 		try {
-			// Ler o arquivo
-			sc = new Scanner(file);
+			fr = new FileReader(path);
+			br = new BufferedReader(fr);
 			
-			// Percorer cada linha do arquivo
-			while(sc.hasNextLine()) {
-				System.out.println(sc.nextLine());
+			String file = br.readLine();
+			
+			while(file != null) {
+				System.out.println(file);
+				file = br.readLine();
 			}
+			
 		}
-		catch(IOException e) {
+		catch (IOException e) {
 			System.out.println("ERRO: " + e.getMessage());
 		}
 		finally {
-			if(sc != null) {
-				sc.close();
+			try {
+				if(fr != null) {
+					fr.close();
+				}
+				if(br != null) {
+					br.close();
+				}
+			}
+			catch (Exception e) {
+				e.printStackTrace();
 			}
 		}
 
