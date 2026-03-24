@@ -17,25 +17,25 @@ public class Main {
 		String path = "/home/rafael/Documentos/nomes.txt";
 		
 		// Instancia o objeto
-		try (BufferedWriter bw = new BufferedWriter(new FileWriter(path))){
-			
-			System.out.println("Digite a quantidade de nomes que você quer escrever: ");
-			int n = sc.nextInt();
-			sc.nextLine();
-			
-			for(int i = 1; i <= n; i++) {
-				System.out.println("Digite o nome #" + i + ": ");
-				String nome = sc.nextLine();
-				// Escreve o nome digitado no arquivo
-				// Também posso passar um lista de nomes: bw.write(lines);
-				bw.write(nome);
-				// Faz uma quebra de linha
-				bw.newLine();
-			}
-		}
-		catch (Exception e) {
-			System.out.println("Erro " + e.getMessage());
-		}
+//		try (BufferedWriter bw = new BufferedWriter(new FileWriter(path))){
+//			
+//			System.out.println("Digite a quantidade de nomes que você quer escrever: ");
+//			int n = sc.nextInt();
+//			sc.nextLine();
+//			
+//			for(int i = 1; i <= n; i++) {
+//				System.out.println("Digite o nome #" + i + ": ");
+//				String nome = sc.nextLine();
+//				// Escreve o nome digitado no arquivo
+//				// Também posso passar um lista de nomes: bw.write(lines);
+//				bw.write(nome);
+//				// Faz uma quebra de linha
+//				bw.newLine();
+//			}
+//		}
+//		catch (Exception e) {
+//			System.out.println("Erro " + e.getMessage());
+//		}
 		
 		// Ler o arquivo
 		try (BufferedReader br = new BufferedReader(new FileReader(path))){
@@ -49,6 +49,9 @@ public class Main {
 		}
 		catch (Exception e) {
 			System.out.println("Erro: " + e.getMessage());
+		}
+		finally {
+			sc.close();
 		}
 
 	}
