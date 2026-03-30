@@ -12,13 +12,14 @@ imposto e valor total do pagamento) e informar os dados na tela. Veja os
 exemplos.*/
 
 import java.time.LocalDateTime;
+
 import java.time.format.DateTimeFormatter;
 import java.util.Scanner;
 
 import model.entities.Locadora;
 import model.entities.Veiculo;
+import model.services.BrasilImpostoServices;
 import model.services.FaturaServices;
-import model.services.ImpostoService;
 
 
 public class Main {
@@ -43,7 +44,7 @@ public class Main {
 		double valorPorDia = sc.nextDouble();
 		
 		Locadora locadora = new Locadora(retirada, retorno, new Veiculo(modelo));
-		FaturaServices fs = new FaturaServices(valorPorHora, valorPorDia, new ImpostoService());
+		FaturaServices fs = new FaturaServices(valorPorHora, valorPorDia, new BrasilImpostoServices());
 		fs.gerarFatura(locadora);
 		
 		System.out.println("Fatura");

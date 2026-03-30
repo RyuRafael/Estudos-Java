@@ -10,12 +10,12 @@ public class FaturaServices {
 	private double valorPorHora;
 	private double valorPorDia;
 
-	private ImpostoService impostoService;
+	private ImpostoServices impostoServices;
 
-	public FaturaServices(double valorPorHora, double valorPorDia, ImpostoService impostoService) {
+	public FaturaServices(double valorPorHora, double valorPorDia, ImpostoServices impostoServices) {
 		this.valorPorHora = valorPorHora;
 		this.valorPorDia = valorPorDia;
-		this.impostoService = impostoService;
+		this.impostoServices = impostoServices;
 	}
 
 	public double getValorPorHora() {
@@ -34,12 +34,12 @@ public class FaturaServices {
 		this.valorPorDia = valorPorDia;
 	}
 
-	public ImpostoService getImpostoService() {
-		return impostoService;
+	public ImpostoServices getImpostoService() {
+		return impostoServices;
 	}
 
-	public void setImpostoService(ImpostoService impostoService) {
-		this.impostoService = impostoService;
+	public void setImpostoService(ImpostoServices impostoService) {
+		this.impostoServices = impostoService;
 	}
 
 	public void gerarFatura(Locadora locadora) {
@@ -54,7 +54,7 @@ public class FaturaServices {
 			pagamento = valorPorDia * Math.ceil(hora / 24);
 		}
 		
-		double totalImposto = impostoService.calcularImposto(pagamento);
+		double totalImposto = impostoServices.calcularImposto(pagamento);
 
 		locadora.setFatura(new Fatura(pagamento, totalImposto));
 	}
