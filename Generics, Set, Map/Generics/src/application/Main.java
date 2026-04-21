@@ -21,7 +21,7 @@ public class Main {
 
 		for (int i = 1; i <= quant; i++) {
 			System.out.print("Digite o número #" + i + ": ");
-			int numero = sc.nextInt();
+			Object numero = sc.next();
 			ps.listAdd(numero);
 
 		}
