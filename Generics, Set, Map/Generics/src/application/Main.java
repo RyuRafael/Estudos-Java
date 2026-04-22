@@ -14,20 +14,22 @@ public class Main {
 
 		Scanner sc = new Scanner(System.in);
 
-		PrintServices ps = new PrintServices();
+		// Define o tipo de dado da classe generica
+		PrintServices<Integer> ps = new PrintServices<>();
 
 		System.out.print("Digite a quantidade de números: ");
 		int quant = sc.nextInt();
 
 		for (int i = 1; i <= quant; i++) {
 			System.out.print("Digite o número #" + i + ": ");
-			Object numero = sc.next();
+			int numero = sc.nextInt();
 			ps.listAdd(numero);
 
 		}
-		
+
 		ps.print();
-		System.out.println("\nPrimeiro número: " + ps.primeiroNumero());
+		System.out.println("\nPrimeiro número: " + ps.first());
+		sc.close();
 
 	}
 

@@ -3,15 +3,17 @@ package services;
 import java.util.ArrayList;
 import java.util.List;
 
-public class PrintServices {
+// Define a classe como generica
+public class PrintServices<T> {
 
-	List<Object> list = new ArrayList<Object>();
+	// Pode ser armazenado diferentes tipos de dados sem sem precissar ser reescrito
+	List<T> list = new ArrayList<T>();
 
-	public void listAdd(Object valor) {
+	public void listAdd(T valor) {
 		list.add(valor);
 	}
 
-	public Object primeiroNumero() {
+	public T first() {
 		if (list.isEmpty()) {
 			throw new IllegalStateException("Lista vazia!");
 		}
@@ -21,7 +23,9 @@ public class PrintServices {
 
 	public void print() {
 		System.out.print("[");
-		System.out.print(list.get(0));
+		if (!list.isEmpty()) {
+			System.out.print(list.get(0));
+		}
 		for (int i = 1; i < list.size(); i++) {
 			System.out.print("," + list.get(i));
 		}
