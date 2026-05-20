@@ -3,6 +3,7 @@ package application;
 //Vamos fazer um método para retornar a soma das áreas de uma lista de figuras
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
 import entities.Circle;
@@ -27,7 +28,7 @@ public class Main {
 
 	}
 
-	// permite referência qaualquer subtipo da classe Shape
+//	 permite referência qaualquer subtipo da classe Shape
 	public static double totalArea(List<? extends Shape> list) {
 
 		double sum = 0.0;
@@ -36,4 +37,5 @@ public class Main {
 		}
 		return sum;
 	}
+
 }
