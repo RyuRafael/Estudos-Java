@@ -1,12 +1,20 @@
 package services;
 
-import java.util.ArrayList;
 import java.util.List;
-import java.util.stream.Collectors;
 
 public class CalculoService {
 
-	public int max(List<Integer> list) {
-		return list.stream().max((a, b) -> a.compareTo(b)).orElse(null);
+	public static <T extends Comparable<T>> T max(List<T> list) {
+		if(list.isEmpty()) {
+			throw new IllegalStateException("A lista não pode ser vazia");
+		}
+		
+		T max = list.get(0);
+		for (T item : list) {
+			if(item.compareTo(max) > 0) {
+				max = item;
+			}
+		}
+		return max;
 	}
 }
