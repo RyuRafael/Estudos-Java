@@ -18,13 +18,12 @@ public class PrincipioGetPut {
 		printList(myObjs);
 	}
 
-	
 	public static void copy(List<? extends Number> origen, List<? super Number> destino) {
 		for (Number n : origen) {
 			destino.add(n);
 		}
 	}
-	
+
 	public static void printList(List<?> list) {
 		for (Object obj : list) {
 			System.out.println(obj);
