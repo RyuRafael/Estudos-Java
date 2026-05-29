@@ -26,6 +26,10 @@ public class Product {
 		this.preco = preco;
 	}
 
+	public static void staticPriceUpdate(Product p) {
+		p.setPreco(p.getPreco() * 1.1);
+	}
+	
 	@Override
 	public String toString() {
 		return "Product [nome=" + nome + ", preco=" + String.format("%.2f", preco) + "]";
