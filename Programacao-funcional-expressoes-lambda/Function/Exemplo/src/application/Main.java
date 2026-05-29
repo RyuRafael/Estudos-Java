@@ -31,8 +31,10 @@ public class Main {
 		//List<String> listName = list.stream().map(Product::upperCaseName).collect(Collectors.toList());
 		
 		// Expressão declarada
-		Function<Product, String> func = p -> p.getNome().toUpperCase();
-		List<String> listName = list.stream().map(func).collect(Collectors.toList());
+		//Function<Product, String> func = p -> p.getNome().toUpperCase();
+		//List<String> listName = list.stream().map(func).collect(Collectors.toList());
+		
+		List<String> listName = list.stream().map(p -> p.getNome().toUpperCase()).collect(Collectors.toList());
 
 		listName.forEach(System.out::println);
 
