@@ -10,6 +10,10 @@ public class Product {
 		this.preco = preco;
 	}
 
+	public Product() {
+		super();
+	}
+
 	public String getNome() {
 		return nome;
 	}
@@ -24,6 +28,10 @@ public class Product {
 
 	public void setPreco(double preco) {
 		this.preco = preco;
+	}
+
+	public static String staticUpperCaseName(Product p) {
+		return p.getNome().toUpperCase();
 	}
 
 	@Override

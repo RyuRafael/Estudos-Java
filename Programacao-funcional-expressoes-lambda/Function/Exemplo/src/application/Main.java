@@ -8,7 +8,6 @@ import java.util.stream.Collectors;
 nova lista contendo os nomes dos produtos em caixa alta.*/
 
 import entities.Product;
-import util.UpperCaseName;
 
 public class Main {
 
@@ -19,10 +18,15 @@ public class Main {
 		list.add(new Product("Tv", 900.00));
 		list.add(new Product("Notebook", 1200.00));
 		list.add(new Product("Tablet", 450.00));
-		
-		List<String> l = list.stream().map(new UpperCaseName()).collect(Collectors.toList());
-		
-		l.forEach(System.out::println);
+
+		// Interface
+		// List<String> listName = list.stream().map(new
+		// UpperCaseName()).collect(Collectors.toList());
+
+		// Método Static
+		List<String> listName = list.stream().map(Product::staticUpperCaseName).collect(Collectors.toList());
+
+		listName.forEach(System.out::println);
 
 	}
 
