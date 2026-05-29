@@ -2,6 +2,7 @@ package application;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.function.Function;
 import java.util.stream.Collectors;
 
 /*Fazer um programa que, a partir de uma lista de produtos, gere uma
@@ -27,7 +28,11 @@ public class Main {
 		//List<String> listName = list.stream().map(Product::staticUpperCaseName).collect(Collectors.toList());
 		
 		// Método normal
-		List<String> listName = list.stream().map(Product::upperCaseName).collect(Collectors.toList());
+		//List<String> listName = list.stream().map(Product::upperCaseName).collect(Collectors.toList());
+		
+		// Expressão declarada
+		Function<Product, String> func = p -> p.getNome().toUpperCase();
+		List<String> listName = list.stream().map(func).collect(Collectors.toList());
 
 		listName.forEach(System.out::println);
 
