@@ -24,7 +24,10 @@ public class Main {
 		// UpperCaseName()).collect(Collectors.toList());
 
 		// Método Static
-		List<String> listName = list.stream().map(Product::staticUpperCaseName).collect(Collectors.toList());
+		//List<String> listName = list.stream().map(Product::staticUpperCaseName).collect(Collectors.toList());
+		
+		// Método normal
+		List<String> listName = list.stream().map(Product::upperCaseName).collect(Collectors.toList());
 
 		listName.forEach(System.out::println);
 

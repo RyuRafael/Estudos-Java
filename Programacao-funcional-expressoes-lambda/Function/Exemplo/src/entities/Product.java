@@ -30,8 +30,12 @@ public class Product {
 		this.preco = preco;
 	}
 
-	public static String staticUpperCaseName(Product p) {
-		return p.getNome().toUpperCase();
+//	public static String staticUpperCaseName(Product p) {
+//		return p.getNome().toUpperCase();
+//	}
+
+	public String upperCaseName() {
+		return getNome().toUpperCase();
 	}
 
 	@Override
