@@ -26,26 +26,34 @@ public class Main {
 			// Conectar com o banco
 			conn = DB.getConnection();
 			// Inserir dados
-			st = conn.prepareStatement(
-					"INSERT INTO seller" + "(Name, Email, BirthDate, BaseSalary, DepartmentId)" + "Values (?,?,?,?,?)");
 
-			st.setString(1, "Rafael Ribeiro");
-			st.setString(2, "rafaelribeirorodrigues82@gmail.com");
-			st.setDate(3, new Date(sdf.parse("03/09/2003").getTime()));
-			st.setDouble(4, 4800);
-			st.setInt(5, 1);
+			/*
+			 * st = conn.prepareStatement( "INSERT INTO seller" +
+			 * "(Name, Email, BirthDate, BaseSalary, DepartmentId)" + "Values (?,?,?,?,?)");
+			 * 
+			 * st.setString(1, "Rafael Ribeiro"); st.setString(2,
+			 * "rafaelribeirorodrigues82@gmail.com"); st.setDate(3, new
+			 * Date(sdf.parse("03/09/2003").getTime())); st.setDouble(4, 4800); st.setInt(5,
+			 * 1); st.executeUpdate();
+			 */
+
+			// Atualizar dados
+
+			st = conn.prepareStatement("UPDATE seller SET BaseSalary = BaseSalary + ? WHERE DepartmentId = ?");
+			st.setDouble(1, 200.0);
+			st.setInt(2, 2);
 			st.executeUpdate();
 
 			// Fazer pesquisa
-			st = conn.prepareStatement("select * from department");
+			st = conn.prepareStatement("Select * FROM seller");
 			rs = st.executeQuery();
 
 			while (rs.next()) {
 
-				System.out.println(rs.getInt("id") + ", " + rs.getString("Name"));
+				System.out.println(rs.getInt("DepartmentId") + ", " + rs.getString("BaseSalary"));
 			}
 
-		} catch (SQLException | ParseException e) {
+		} catch (SQLException e) {
 			e.printStackTrace();
 		} finally {
 			DB.closeConnection();
